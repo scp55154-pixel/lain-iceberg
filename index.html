@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>玲音兔子洞冰山图 · Serial Experiments Lain Iceberg</title>
+<meta name="description" content="仿中文兔子洞冰山图制作的 Serial Experiments Lain 冰山图：14 层、200+ 词条，含中文解释与证据链接。">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%2305070c'/><path d='M16 4 L22 12 L26 20 L16 29 L6 20 L10 12 Z' fill='none' stroke='%237fe3ff' stroke-width='1.4'/></svg>">
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <div class="bg-glow"></div>
+  <div class="bg-wires"></div>
+  <div class="bg-grain"></div>
+</div>
+
+<!-- ══════════════ HERO ══════════════ -->
+<header class="hero" id="top">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="kicker">SERIAL EXPERIMENTS LAIN · ICEBERG ARCHIVE</p>
+      <h1>玲音<br><span class="h1-sub">兔子洞冰山图</span></h1>
+      <p class="tagline">close the world, <em>open the nExt</em></p>
+      <p class="lede" id="metaNote"></p>
+      <div class="stats" id="stats"></div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#shaft">开始下潜 ↓</a>
+        <button class="btn" id="randomBtn" type="button">随机一条 ⌁</button>
+      </div>
+      <p class="hint">点击冰山任意一层可直接跳转 · 按 <kbd>/</kbd> 搜索 · <kbd>Esc</kbd> 关闭词条</p>
+    </div>
+    <div class="hero-art">
+      <svg id="iceberg" viewBox="0 0 500 650" role="img" aria-label="分层冰山示意图"></svg>
+    </div>
+  </div>
+  <div class="scroll-line" aria-hidden="true"></div>
+</header>
+
+<!-- ══════════════ STICKY STACK ══════════════ -->
+<div class="sticky-top" id="stickyTop">
+<!-- RAIL -->
+<nav class="rail" id="rail" aria-label="层级导航"></nav>
+
+<!-- TOOLBAR -->
+<div class="toolbar" id="toolbar">
+  <div class="toolbar-inner">
+    <label class="search">
+      <span class="search-ico" aria-hidden="true">⌕</span>
+      <input id="search" type="search" placeholder="搜索词条 / 解释 / 关键词…" autocomplete="off" spellcheck="false">
+      <button class="search-clear" id="searchClear" type="button" aria-label="清空">×</button>
+    </label>
+    <div class="filters">
+      <div class="filter-group" id="catFilters" aria-label="分类筛选"></div>
+      <div class="filter-group sources" id="srcFilters" aria-label="来源筛选"></div>
+    </div>
+    <button class="reset-btn" id="resetFilters" type="button">重置</button>
+  </div>
+  <div class="toolbar-status"><span id="statusText"></span></div>
+</div>
+</div>
+
+<!-- ══════════════ SHAFT ══════════════ -->
+<main id="shaft" class="shaft"></main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <p class="foot-title">Lain 兔子洞冰山图 · 实验性动漫</p>
+    <p>本站为同人整理项目，与 NBCUniversal / Triangle Staff / 上田耕行 无关。人物与作品版权归原权利人所有。<br>
+    词条顺序不代表任何属性的高低；「无来源」条目请当作都市传说阅读，不要当作设定。</p>
+    <p class="foot-note">证据链接大多指向 <a href="https://lain.wiki/wiki/Main_Page" target="_blank" rel="noopener">lain.wiki</a>（社区百科）与官方站点；部分链接在特定网络环境下可能无法直接访问。</p>
+    <p class="foot-mark">Let's all love Lain.</p>
+  </div>
+</footer>
+
+<!-- ══════════════ DRAWER ══════════════ -->
+<div class="backdrop" id="backdrop" hidden></div>
+<aside class="drawer" id="drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+  <div class="drawer-head">
+    <div class="drawer-badges" id="drawerBadges"></div>
+    <button class="drawer-close" id="drawerClose" type="button" aria-label="关闭">×</button>
+  </div>
+  <div class="drawer-body">
+    <h2 id="drawerTitle"></h2>
+    <p class="drawer-sub" id="drawerSub"></p>
+    <div class="drawer-desc" id="drawerDesc"></div>
+    <div class="drawer-evidence">
+      <h3>证据 / 出处</h3>
+      <ul id="drawerLinks"></ul>
+    </div>
+    <div class="drawer-source-note" id="drawerSrcNote"></div>
+  </div>
+  <div class="drawer-foot" id="drawerFoot"></div>
+</aside>
+
+<script src="data.js"></script>
+<script src="data2.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
